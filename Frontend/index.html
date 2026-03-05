@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA: Foto do seu Aniversário</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="particles" id="particles"></div>
+
+    <div class="container">
+        <header class="glass-header">
+            <h1>Descubra o Universo</h1>
+            <p>Veja a imagem astronômica do dia (APOD) capturada pela NASA na data do seu aniversário!</p>
+        </header>
+
+        <main>
+            <section class="input-section glass-panel">
+                <div class="input-group">
+                    <label for="birthdate">Qual a data do seu aniversário?</label>
+                    <input type="date" id="birthdate" max="">
+                </div>
+                <button id="searchButton" class="glow-button">
+                    <span>Buscar Estrelas</span>
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 4L12 20M12 4L6 10M12 4L18 10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </section>
+
+            <section id="resultSection" class="result-section glass-panel hidden">
+                <div id="loader" class="loader hidden">
+                    <div class="spinner"></div>
+                    <p>Viajando pelo espaço-tempo...</p>
+                </div>
+
+                <div id="apodContent" class="apod-content hidden">
+                    <h2 id="apodTitle"></h2>
+                    <p id="apodDate" class="date-badge"></p>
+                    <div class="media-container" id="mediaContainer">
+                        <!-- Image or Iframe will be injected here -->
+                    </div>
+                    <p id="apodDescription"></p>
+                    <p id="apodCopyright" class="copyright"></p>
+                </div>
+
+                <div id="errorMessage" class="error-message hidden">
+                    <p></p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
