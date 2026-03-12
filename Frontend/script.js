@@ -37,8 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         showLoader();
 
         try {
-            // Updated to fetch from our Python FastAPI backend
-            const response = await fetch(`http://127.0.0.1:8000/api/apod?date=${date}`);
+            // Always point to our local Python backend
+            const baseUrl = 'http://127.0.0.1:8000';
+            const response = await fetch(`${baseUrl}/api/apod?date=${date}`);
 
             if (!response.ok) {
                 const errData = await response.json();
